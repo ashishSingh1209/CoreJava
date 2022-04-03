@@ -13,6 +13,7 @@ class SharedProducts {
         products.put("Eraser", 10);
     }
 
+    //Give access to single thread at a time no other thread can execute while this method is in the state of execution
     public synchronized String buyProduct(String key) {
         if (products.containsKey(key)) {
             int quantity = products.get(key);
